@@ -1,4 +1,4 @@
-# PROGRAMS/INSTALLERS - RAPHIGGA HERRRA & YUANIGGA RUBIO
+# PROGRAMS/INSTALLERS - RAPHIGGA HERRRA & YUANIGGA RUBY YO
 
 import webbrowser
 
@@ -171,4 +171,5 @@ class SoftwareInstaller:
     def install_7zip(self):
         """install 7zip"""
         # implement here
+
         pass
