@@ -1,3 +1,5 @@
+# MAIN - RUN THIS FILE TO EXECUTE
+
 import tkinter as tk
 from interface import ToolkitInterface
 from logger import Logger
@@ -10,3 +12,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
