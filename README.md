@@ -6,9 +6,9 @@ A Python Tkinter utility for IT Lyceans that provides one-click installation of 
 
 ## 👥 Team
 
-* interface.py – Kyle Garcia
-* installer.py – Raphael Herrera & Yuan Rubio
-* browser.py – Joseph Pimentel
-* logger.py + functions.py – Joswen Pinca
+* interface.py               – Kyle Garcia
+* installer.py               – Raphael Herrera & Yuan Rubio
+* browser.py                 – Joseph Pimentel
+* logger.py + functions.py   – Joswen Pinca
 
 
