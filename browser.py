@@ -1,4 +1,4 @@
-# BROWSER - JASKABADDIE PIMINTALL
+# BROWSER - JASKABADDIE PIMINTALLERS
 
 import webbrowser
 
@@ -17,4 +17,5 @@ class BrowserEmbedder:
             webbrowser.open(url)
             return True
         except:
+
             return False
