@@ -11,17 +11,17 @@ class ToolkitFunctions:
         # example implementation for one software:
         if software_key == "python":
             return self.installer.install_python()
-        if software_key == "python":
+        if software_key == "java":
             return self.installer.install_python()
-        if software_key == "python":
+        if software_key == "nodejs":
             return self.installer.install_python()
-        if software_key == "python":
+        if software_key == "vscode":
             return self.installer.install_python()
-        if software_key == "python":
+        if software_key == "git":
             return self.installer.install_python()
-        if software_key == "python":
+        if software_key == "Android Studio":
             return self.installer.install_python()
-        if software_key == "python":
+        if software_key == "Tableau Public":
             return self.installer.install_python()
         if software_key == "python":
             return self.installer.install_python()
@@ -38,4 +38,5 @@ class ToolkitFunctions:
         
 
         return False
+
 
