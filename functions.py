@@ -11,8 +11,31 @@ class ToolkitFunctions:
         # example implementation for one software:
         if software_key == "python":
             return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
+        if software_key == "python":
+            return self.installer.install_python()
         
         # implement the rest dito mismo
         
 
         return False
+
