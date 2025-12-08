@@ -15,7 +15,7 @@ class SoftwareInstaller:
             'vscode': 'https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user',
             'android studio': 'https://redirector.gvt1.com/edgedl/android/studio/install/2025.2.2.7/android-studio-2025.2.2.7-windows.exe',
             'sublime_text': 'https://www.sublimetext.com/download_thanks?target=win-x64',
-            'visual studio': 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&cid=2500&passive=false'
+            'visual studio': 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&cid=2500&passive=false',
 
             #LANGUAGE & RUNTIMES
             'python': 'https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe',
@@ -24,7 +24,6 @@ class SoftwareInstaller:
             'visual c++': 'https://aka.ms/vs/17/release/vc_redist.x64.exe',                  
             'git': 'https://github.com/git-for-windows/git/releases/download/v2.52.0.windows.1/Git-2.52.0-64-bit.exe',
             'php': 'https://downloads.php.net/~windows/releases/archives/php-8.5.0-src.zip',
-
 
             #DATABASE
             'mysql  workbench': 'https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.38-winx64.msi',
@@ -66,14 +65,13 @@ class SoftwareInstaller:
             'vlc': 'https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.exe',
             '7zip': 'https://www.7-zip.org/a/7z2301-x64.exe',
             'winrar': 'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-713.exe',
-            'nanazip': 'https://www.nanazip.com/downloads/nanazip-setup.exe'
+            'nanazip': 'https://www.nanazip.com/downloads/nanazip-setup.exe',
         }
 
         # ADD MORE
-            # ALSO, ADD KO LANG NA I-CATEGORIZE NIYO YUNG BAWAT PROGRAMS AND COMMENT
-            # (ex. PYTHON,MYSQL - #LANGUAGE & RUNTIMES) 
-            # (ex. VSCODE - #IDE)
-
+        # ALSO, ADD KO LANG NA I-CATEGORIZE NIYO YUNG BAWAT PROGRAMS AND COMMENT
+        # (ex. PYTHON,MYSQL - #LANGUAGE & RUNTIMES) 
+        # (ex. VSCODE - #IDE)
     #LANGUAGE & RUNTIME  
     def install_php(self):
         self.logger.log("Installing PHP")
