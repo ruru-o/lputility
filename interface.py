@@ -14,7 +14,8 @@ class ToolkitInterface:
         'accent_bright': '#b30000',   # bright red hover
         'text': '#e0e0e0',            # soft white
         'text_dim': '#808080',        # dim gray
-        'border': '#2d2d2d'           # subtle border
+        'border': '#2d2d2d',           # subtle border
+        'text': '#FFFFFF'              # white
     }
     
     def __init__(self, root, logger):
@@ -29,14 +30,14 @@ class ToolkitInterface:
     
     def _setup_window(self):
         self.root.title("LPUtility")
-        self.root.geometry("1000x700")
+        self.root.geometry("1200x700")
         self.root.configure(bg=self.COLORS['bg'])
         
         # center window
         self.root.update_idletasks()
-        x = (self.root.winfo_screenwidth() - 1000) // 2
+        x = (self.root.winfo_screenwidth() - 1200) // 2
         y = (self.root.winfo_screenheight() - 700) // 2
-        self.root.geometry(f"1000x700+{x}+{y}")
+        self.root.geometry(f"1200x700+{x}+{y}")
     
     def _create_layout(self):
         # header
@@ -49,13 +50,13 @@ class ToolkitInterface:
             text="LPUtility",
             font=('Segoe UI', 24, 'bold'),
             bg=self.COLORS['bg'],
-            fg=self.COLORS['accent']
+            fg=self.COLORS['text']
         )
         title.pack(pady=(10, 0))
         
         subtitle = tk.Label(
             header,
-            text="toolkit ng mga bakla",
+            text="Student Utility Toolkit for Lyceans",
             font=('Segoe UI', 10),
             bg=self.COLORS['bg'],
             fg=self.COLORS['text_dim']
@@ -73,9 +74,12 @@ class ToolkitInterface:
         
         self._create_categories()
         
-        # right side: tools display
+        # center: tools display
         self.tools_frame = tk.Frame(content, bg=self.COLORS['bg'])
-        self.tools_frame.pack(side='left', fill='both', expand=True)
+        self.tools_frame.pack(side='left', fill='both', expand=True, padx=(0, 20))
+        
+        # right side: activity logs
+        self._create_log_display(content)
         
         # welcome message
         self._show_welcome()
@@ -85,6 +89,7 @@ class ToolkitInterface:
             ("Programming Tools", "programming"),
             ("Academic Utilities", "academic"),
             ("Productivity Software", "productivity"),
+            ("Creative Tools", "creative"),
             ("LPU Portals", "portals")
         ]
         
@@ -157,6 +162,16 @@ class ToolkitInterface:
         frame.config(bg=self.COLORS['accent'])
         label.config(bg=self.COLORS['accent'], fg='white')
         
+        # log category selection
+        category_names = {
+            'programming': 'Programming Tools',
+            'academic': 'Academic Utilities',
+            'productivity': 'Productivity Software',
+            'creative': 'Creative Tools',
+            'portals': 'LPU Portals'
+        }
+        self._add_log(f"Viewing: {category_names.get(category, category)}", "info")
+        
         # show tools for this category
         self._show_tools(category)
     
@@ -166,7 +181,7 @@ class ToolkitInterface:
         
         welcome = tk.Label(
             self.tools_frame,
-            text="← pumili ka tanga tamad ka kasi eh",
+            text="← Pick your poison",
             font=('Segoe UI', 13),
             bg=self.COLORS['bg'],
             fg=self.COLORS['text_dim']
@@ -212,6 +227,8 @@ class ToolkitInterface:
             self._show_academic_tools(scrollable)
         elif category == 'productivity':
             self._show_productivity_tools(scrollable)
+        elif category == 'creative':
+            self._show_creative_tools(scrollable)
         elif category == 'portals':
             self._show_portals(scrollable)
     
@@ -219,48 +236,85 @@ class ToolkitInterface:
         self._create_subcategory(parent, "IDEs & Editors", [
             ("Visual Studio Code", "vscode"),
             ("Visual Studio", "visual_studio"),
+            ("PyCharm", "pycharm"),
+            ("IntelliJ IDEA", "intellij"),
+            ("Eclipse", "eclipse"),
+            ("Android Studio", "androidstudio"),
+            ("Sublime Text", "sublimetext"),
+            ("Notepad++", "notepad"),
         ])
         
         self._create_subcategory(parent, "Languages & Runtimes", [
             ("Python", "python"),
+            ("Java JDK", "java"),
+            ("Node.js", "nodejs"),
+            ("PHP", "php"),
+            ("Visual C++", "visualcplusplus"),
         ])
         
         self._create_subcategory(parent, "Databases", [
-            ("TO BE ADDED", ""),
+            ("MySQL Workbench", "mysqlworkbench"),
+            ("PostgreSQL", "postgresql"),
+            ("MongoDB Compass", "mongodbcompass"),
+            ("SQLite Browser", "sqlitebrowser"),
+            ("DBeaver", "dbeaver"),
         ])
         
         self._create_subcategory(parent, "Version Control", [
-            ("TO BE ADDED", ""),
+            ("Git", "git"),
         ])
     
     def _show_academic_tools(self, parent):
-        self._create_subcategory(parent, "Development Tools", [
-            ("TO BE ADDED", ""),
+        self._create_subcategory(parent, "Note Taking & Writing", [
+            ("Notion", "notion"),
+            ("Grammarly", "grammarly"),
+            ("Cobalt", "cobalt"),
         ])
         
-        self._create_subcategory(parent, "Data Science", [
-            ("TO BE ADDED", ""),
-        ])
-        
-        self._create_subcategory(parent, "Utilities", [
-            ("TO BE ADDED", ""),
+        self._create_subcategory(parent, "Data Visualization", [
+            ("Tableau Public", "tableaupublic"),
         ])
     
     def _show_productivity_tools(self, parent):
         self._create_subcategory(parent, "Office Suites", [
-            ("TO BE ADDED", ""),
+            ("Microsoft 365", "m365"),
         ])
         
         self._create_subcategory(parent, "Web Browsers", [
-            ("TO BE ADDED", ""),
+            ("Mozilla Firefox", "mozillafirefox"),
+            ("Opera", "opera"),
+            ("Opera GX", "operagx"),
+            ("Brave", "brave"),
+            ("Vivaldi", "vivaldi"),
         ])
         
         self._create_subcategory(parent, "Communication", [
-            ("TO BE ADDED", ""),
+            ("Microsoft Teams", "microsoftteams"),
+            ("Discord", "discord"),
+            ("Telegram", "telegram"),
         ])
         
         self._create_subcategory(parent, "Media & Files", [
-            ("TO BE ADDED", ""),
+            ("VLC Media Player", "vlc"),
+            ("7-Zip", "7zip"),
+            ("WinRAR", "winrar"),
+            ("NanaZip", "nanazip"),
+        ])
+    
+    def _show_creative_tools(self, parent):
+        self._create_subcategory(parent, "Graphic Design", [
+            ("GIMP", "gimp"),
+            ("Krita", "krita"),
+            ("Canva", "canva"),
+        ])
+        
+        self._create_subcategory(parent, "3D & Animation", [
+            ("Blender", "blender"),
+        ])
+        
+        self._create_subcategory(parent, "Audio & Video", [
+            ("Audacity", "audacity"),
+            ("CapCut", "capcut"),
         ])
     
     def _show_portals(self, parent):
@@ -366,18 +420,132 @@ class ToolkitInterface:
             relief='flat',
             cursor='hand2',
             width=12,
-            command=lambda: self.browser.open_portal(url)
+            command=lambda: self._handle_portal_open(name, url)
         )
         open_btn.pack(side='right', padx=12, pady=12)
         
         open_btn.bind('<Enter>', lambda e: open_btn.config(bg=self.COLORS['accent_bright']))
         open_btn.bind('<Leave>', lambda e: open_btn.config(bg=self.COLORS['accent']))
     
+    def _handle_portal_open(self, name, url):
+        self._add_log(f"Opening portal: {name}", "info")
+        if self.browser.open_portal(url):
+            self._add_log(f"✓ Portal opened: {name}", "success")
+        else:
+            self._add_log(f"✗ Failed to open: {name}", "error")
+    
+    def _create_log_display(self, parent):
+        log_container = tk.Frame(parent, bg=self.COLORS['bg'], width=280)
+        log_container.pack(side='right', fill='y')
+        log_container.pack_propagate(False)
+        
+        # log header
+        log_header = tk.Frame(
+            log_container,
+            bg=self.COLORS['card'],
+            highlightbackground=self.COLORS['border'],
+            highlightthickness=1
+        )
+        log_header.pack(fill='x', pady=(0, 10))
+        
+        tk.Label(
+            log_header,
+            text="ACTIVITY LOG",
+            font=('Segoe UI', 10, 'bold'),
+            bg=self.COLORS['card'],
+            fg=self.COLORS['text'],
+            pady=10
+        ).pack()
+        
+        # log display area with scrollbar
+        log_frame = tk.Frame(
+            log_container,
+            bg=self.COLORS['card'],
+            highlightbackground=self.COLORS['border'],
+            highlightthickness=1
+        )
+        log_frame.pack(fill='both', expand=True)
+        
+        # scrollbar
+        scrollbar = tk.Scrollbar(log_frame)
+        scrollbar.pack(side='right', fill='y')
+        
+        # text widget for logs
+        self.log_text = tk.Text(
+            log_frame,
+            bg=self.COLORS['card'],
+            fg=self.COLORS['text'],
+            font=('Consolas', 9),
+            wrap='word',
+            yscrollcommand=scrollbar.set,
+            relief='flat',
+            padx=10,
+            pady=10,
+            state='disabled'
+        )
+        self.log_text.pack(fill='both', expand=True)
+        scrollbar.config(command=self.log_text.yview)
+        
+        # configure text tags for different log types
+        self.log_text.tag_config('timestamp', foreground=self.COLORS['text_dim'])
+        self.log_text.tag_config('success', foreground='#00ff00')
+        self.log_text.tag_config('error', foreground='#ff4444')
+        self.log_text.tag_config('info', foreground=self.COLORS['accent_bright'])
+        self.log_text.tag_config('normal', foreground=self.COLORS['text'])
+        
+        # clear button
+        clear_btn = tk.Button(
+            log_container,
+            text="Clear Logs",
+            font=('Segoe UI', 9),
+            bg=self.COLORS['card'],
+            fg=self.COLORS['text_dim'],
+            activebackground=self.COLORS['card_hover'],
+            activeforeground=self.COLORS['text'],
+            relief='flat',
+            cursor='hand2',
+            command=self._clear_logs
+        )
+        clear_btn.pack(fill='x', pady=(10, 0))
+        
+        clear_btn.bind('<Enter>', lambda e: clear_btn.config(bg=self.COLORS['card_hover']))
+        clear_btn.bind('<Leave>', lambda e: clear_btn.config(bg=self.COLORS['card']))
+        
+        # add initial welcome log
+        self._add_log("System initialized", "success")
+    
+    def _add_log(self, message, log_type='normal'):
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        
+        # log to file using logger.py
+        self.logger.log(message)
+        
+        # display in UI
+        self.log_text.config(state='normal')
+        
+        # add timestamp
+        self.log_text.insert('end', f"[{timestamp}] ", 'timestamp')
+        
+        # add message with appropriate tag
+        self.log_text.insert('end', f"{message}\n", log_type)
+        
+        self.log_text.config(state='disabled')
+        self.log_text.see('end')  # auto-scroll to bottom
+    
+    def _clear_logs(self):
+        self.log_text.config(state='normal')
+        self.log_text.delete(1.0, 'end')
+        self.log_text.config(state='disabled')
+        self._add_log("Logs cleared", "info")
+    
     def _handle_install(self, name, key):
-        self.logger.log(f"Install: {name}")
+        self._add_log(f"Install requested: {name}", "info")
         
         if messagebox.askyesno("Confirm", f"Install {name}?"):
             if self.functions.install(key):
+                self._add_log(f"✓ {name} download started", "success")
                 messagebox.showinfo("Success", f"{name} download started")
             else:
+                self._add_log(f"✗ Failed to install {name}", "error")
                 messagebox.showerror("Error", f"Failed to start {name} installation")
