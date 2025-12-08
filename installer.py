@@ -15,6 +15,7 @@ class SoftwareInstaller:
             'vscode': 'https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user',
             'android studio': 'https://redirector.gvt1.com/edgedl/android/studio/install/2025.2.2.7/android-studio-2025.2.2.7-windows.exe',
             'sublime_text': 'https://www.sublimetext.com/download_thanks?target=win-x64',
+            'visual studio': 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&cid=2500&passive=false'
 
             #LANGUAGE & RUNTIMES
             'python': 'https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe',
@@ -65,7 +66,7 @@ class SoftwareInstaller:
             'vlc': 'https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.exe',
             '7zip': 'https://www.7-zip.org/a/7z2301-x64.exe',
             'winrar': 'https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-713.exe',
-            'nanazip': 'https://www.nanazip.com/downloads/nanazip-setup.exe',
+            'nanazip': 'https://www.nanazip.com/downloads/nanazip-setup.exe'
         }
 
         # ADD MORE
@@ -134,7 +135,7 @@ class SoftwareInstaller:
     def install_visual_studio(self):
         self.logger.log("Installing Visual Studio")
         try:
-            webbrowser.open(self.urls['visual_studio'])
+            webbrowser.open(self.urls['visual studio'])
             return True
         except:
             return False
