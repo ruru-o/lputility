@@ -338,7 +338,7 @@ class SoftwareInstaller:
             return False
         
     #DATABASE
-    def install_winzip(self):
+    def install_mysqlworkbench(self):
         self.logger.log("Installing MySQL Workbench")
         try:
             webbrowser.open(self.urls['mysql workbench'])
@@ -362,7 +362,7 @@ class SoftwareInstaller:
         except:
             return False
         
-    def install_sqliteBroswer(self):
+    def install_sqliteBrowser(self):
         self.logger.log("Installing SQLite Browser")
         try:
             webbrowser.open(self.urls['sqlite browser'])
@@ -418,3 +418,4 @@ class SoftwareInstaller:
             return True
         except:
             return False
+
