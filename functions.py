@@ -9,9 +9,9 @@ class ToolkitFunctions:
     
     def install(self, software_key):
         #IDE
-        if software_key == "notepad++":
+        if software_key == "notepad":
             return self.installer.install_notepad()
-        elif software_key == "Pycharm":
+        elif software_key == "pycharm":
             return self.installer.install_pycharm()
         elif software_key == "intellij":
             return self.installer.install_intellij()
@@ -19,11 +19,13 @@ class ToolkitFunctions:
             return self.installer.install_eclipse()
         elif software_key == "vscode":
             return self.installer.install_vscode()
-        elif software_key == "android studio":
+        elif software_key == "visualstudio":
+            return self.installer.install_visualstudio()
+        elif software_key == "androidstudio":
             return self.installer.install_androidstudio()
-        elif software_key == "sublime_text":
+        elif software_key == "sublimetext":
             return self.installer.install_sublimetext()
-
+        
         #LANGUAGE & RUNTIMES
         elif software_key == "python":
             return self.installer.install_python()
@@ -31,22 +33,22 @@ class ToolkitFunctions:
             return self.installer.install_java()
         elif software_key == "nodejs":
             return self.installer.install_nodejs()
-        elif software_key == "visual c++":
-            return self.installer.install_visualcplusplus()
+        elif software_key == "visualc":
+            return self.installer.install_visualc()
         elif software_key == "git":
             return self.installer.install_git()
         elif software_key == "php":
             return self.installer.install_php()
 
         #DATABASE
-        elif software_key == "mysql  workbench":
+        elif software_key == "mysqlworkbench":
             return self.installer.install_mysqlworkbench()
-        elif software_key == "potgresql":
-            return self.installer.install_Postgresql()
-        elif software_key == "mongodb compass":
+        elif software_key == "postgresql":
+            return self.installer.install_postgresql()
+        elif software_key == "mongodbcompass":
             return self.installer.install_mongodbcompass()
-        elif software_key == "sqlite browser":
-            return self.installer.install_sqliteBrowser()
+        elif software_key == "sqlitebrowser":
+            return self.installer.install_sqlitebrowser()
         elif software_key == "dbeaver":
             return self.installer.install_dbeaver()
 
@@ -54,59 +56,59 @@ class ToolkitFunctions:
         elif software_key == "notion":
             return self.installer.install_notion()
         elif software_key == "grammarly":
-            return self.installer.install_Grammarly()
+            return self.installer.install_grammarly()
         elif software_key == "cobalt":
             return self.installer.install_cobalt()
-        elif software_key == "Canva":
-            return self.installer.install_Canva()
+        elif software_key == "canva":
+            return self.installer.install_canva()
 
         #PRODUCTIVITY
-        elif software_key == "M365":
-            return self.installer.install_M365()
-        elif software_key == "Tableau Public":
+        elif software_key == "m365":
+            return self.installer.install_m365()
+        elif software_key == "tableaupublic":
             return self.installer.install_tableaupublic()
 
         #CREATIVITY
-        elif software_key == "GIMP":
-            return self.installer.install_GIMP()
-        elif software_key == "Blender":
-            return self.installer.install_Blender()
-        elif software_key == "Audacity":
-            return self.installer.install_Audacity()
-        elif software_key == "Krita":
-            return self.installer.install_Krita()
-        elif software_key == "CapCut":
-            return self.installer.install_Capcut()
+        elif software_key == "gimp":
+            return self.installer.install_gimp()
+        elif software_key == "blender":
+            return self.installer.install_blender()
+        elif software_key == "audacity":
+            return self.installer.install_audacity()
+        elif software_key == "krita":
+            return self.installer.install_krita()
+        elif software_key == "capcut":
+            return self.installer.install_capcut()
 
         #WEB BROWSERS
-        elif software_key == "mozilla firefox":
-            return self.installer.install_MozillaFirefox()
-        elif software_key == "Opera":
-            return self.installer.install_Opera()
-        elif software_key == "Opera GX":
-            return self.installer.install_OperaGX()
-        elif software_key == "Brave":
-            return self.installer.install_Brave()
+        elif software_key == "mozillafirefox":
+            return self.installer.install_mozillafirefox()
+        elif software_key == "opera":
+            return self.installer.install_opera()
+        elif software_key == "operagx":
+            return self.installer.install_operagx()
+        elif software_key == "brave":
+            return self.installer.install_brave()
         elif software_key == "vivaldi":
             return self.installer.install_vivaldi()
         
         #COMMUNICATION
         elif software_key == "discord":
-            return self.installer.install_Discord()
+            return self.installer.install_discord()
         elif software_key == "telegram":
-            return self.installer.install_Telegram()
-        elif software_key == "Microsoft Teams":
-            return self.installer.install_Microsoft()
+            return self.installer.install_telegram()
+        elif software_key == "microsoftteams":
+            return self.installer.install_microsoftteams()
 
         #MEDIA AND FILES
         elif software_key == "vlc":
-            return self.installer.install_VLC()
+            return self.installer.install_vlc()
         elif software_key == "7zip":
             return self.installer.install_7zip()
         elif software_key == "winrar":
-            return self.installer.install_Winrar()
+            return self.installer.install_winrar()
         elif software_key == "nanazip":
-            return self.installer.install_Nanazip()
+            return self.installer.install_nanazip()
 
         return False
 

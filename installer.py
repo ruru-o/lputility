@@ -8,58 +8,58 @@ class SoftwareInstaller:
         # we'll keep it browser muna so we can complete it. soon na yung winget (auto install)
         self.urls = {
             #IDE
-            'notepad++': 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.8/npp.8.8.8.Installer.x64.exe',
-            'Pycharm': 'https://download.jetbrains.com/python/pycharm-community-2024.2.3.exe',
+            'notepad': 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.8/npp.8.8.8.Installer.x64.exe',
+            'pycharm': 'https://download.jetbrains.com/python/pycharm-community-2024.2.3.exe',
             'intellij': 'https://download.jetbrains.com/python/pycharm-community-2024.2.3.exe',
             'eclipse': 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2024-06/R/eclipse-jee-2024-06-R-win32-x86_64.zip&r=1',
             'vscode': 'https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user',
-            'android studio': 'https://redirector.gvt1.com/edgedl/android/studio/install/2025.2.2.7/android-studio-2025.2.2.7-windows.exe',
-            'sublime_text': 'https://www.sublimetext.com/download_thanks?target=win-x64',
-            'visual studio': 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&cid=2500&passive=false',
+            'androidstudio': 'https://redirector.gvt1.com/edgedl/android/studio/install/2025.2.2.7/android-studio-2025.2.2.7-windows.exe',
+            'sublimetext': 'https://www.sublimetext.com/download_thanks?target=win-x64',
+            'visualstudio': 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable&version=VS18&source=VSLandingPage&cid=2500&passive=false',
 
             #LANGUAGE & RUNTIMES
             'python': 'https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe',
             'java': 'https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe',
             'nodejs': 'https://nodejs.org/dist/v24.11.1/node-v24.11.1-x64.msi',
-            'visual c++': 'https://aka.ms/vs/17/release/vc_redist.x64.exe',                  
+            'visualc': 'https://aka.ms/vs/17/release/vc_redist.x64.exe',                  
             'git': 'https://github.com/git-for-windows/git/releases/download/v2.52.0.windows.1/Git-2.52.0-64-bit.exe',
             'php': 'https://downloads.php.net/~windows/releases/archives/php-8.5.0-src.zip',
 
             #DATABASE
-            'mysql  workbench': 'https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.38-winx64.msi',
+            'mysqlworkbench': 'https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-8.0.38-winx64.msi',
             'postgresql': 'https://get.enterprisedb.com/postgresql/postgresql-15.9-1-windows-x64.exe',
-            'mongodb compass': 'https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.2.2-signed.msi',
-            'sqlite browser': 'https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi',
+            'mongodbcompass': 'https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.2.2-signed.msi',
+            'sqlitebrowser': 'https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win64.msi',
             'dbeaver': 'https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe',
 
             #ACADEMICS
             'notion': 'https://www.notion.so/desktop/windows/download',
             'grammarly': 'https://download-windows.grammarly.com/w/GrammarlyInstaller.exe',
             'cobalt': 'https://www.cobaltlabs.io/downloads/CobaltSetup.exe',
-            'Canva': 'https://www.canva.com/download/windows/canva-desktop/',
+            'canva': 'https://www.canva.com/download/windows/canva-desktop/',
 
             #PRODUCTIVITY
-            'M365': 'https://go.microsoft.com/fwlink/?linkid=2264705&clcid=0x409&culture=en-us&country=us',
-            'Tableau Public': 'https://www.tableau.com/en-us/downloads/public/pc64',
+            'm365': 'https://go.microsoft.com/fwlink/?linkid=2264705&clcid=0x409&culture=en-us&country=us',
+            'tableaupublic': 'https://www.tableau.com/en-us/downloads/public/pc64',
 
             #CREATIVITY
-            'GIMP': 'https://download.gimp.org/gimp/v3.0/windows/gimp-3.0.6-setup-1.exe',
-            'Blender': 'https://www.blender.org/download/release/Blender5.0/blender-5.0.0-windows-x64.msi/',
-            'Audacity': 'https://muse-cdn.com/Audacity_Installer_via_MuseHub.exe',
-            'Krita': 'https://download.kde.org/stable/krita/5.2.13/krita-x64-5.2.13-setup.exe',
-            'CapCut': 'https://www.capcut.com/activity/download_pc',
+            'gimp': 'https://download.gimp.org/gimp/v3.0/windows/gimp-3.0.6-setup-1.exe',
+            'blender': 'https://www.blender.org/download/release/Blender5.0/blender-5.0.0-windows-x64.msi/',
+            'audacity': 'https://muse-cdn.com/Audacity_Installer_via_MuseHub.exe',
+            'krita': 'https://download.kde.org/stable/krita/5.2.13/krita-x64-5.2.13-setup.exe',
+            'capcut': 'https://www.capcut.com/activity/download_pc',
 
             #WEB BROWSERS
-            'mozilla firefox': 'https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US&attribution_code=c291cmNlPXd3dy5nb29nbGUuY29tJm1lZGl1bT1yZWZlcnJhbCZjYW1wYWlnbj1TRVRfREVGQVVMVF9CUk9XU0VSJmNvbnRlbnQ9KG5vdCBzZXQpJmV4cGVyaW1lbnQ9KG5vdCBzZXQpJnZhcmlhdGlvbj0obm90IHNldCkmdWE9Y2hyb21lJmNsaWVudF9pZF9nYTQ9Mzg2MzI0MjE5LjE3NjUxODk2NDkmc2Vzc2lvbl9pZD00NDk1MDQxMzQxJmRsc291cmNlPWZ4ZG90Y29t&attribution_sig=76dcba95b770881745bbba89d77b011307f2687a99f970ec8216f135bd39bdc2',
-            'Opera': 'https://net.geo.opera.com/opera/stable/windows?utm_tryagain=yes&utm_source=PWNgames&utm_medium=pa&utm_campaign=PWN_PH_HVR_9396_WEB_3580&edition=std-2&&utm_id=0a78d242add74539bb3d50de93465cb2&http_referrer=https%3A%2F%2Fwww.opera.com%2Fget%2Fopera-gx%3Futm_source%3DPWNgames%26utm_medium%3Dpa%26utm_campaign%3DPWN_PH_HVR_9396_WEB_3580%26utm_id%3D0a78d242add74539bb3d50de93465cb2%26edition%3Dstd-2&utm_site=opera_com&&utm_lastpage=opera.com/',
-            'Opera GX': 'https://net.geo.opera.com/opera_gx/stable/windows?utm_tryagain=yes&utm_source=PWNgames&utm_medium=pa&utm_campaign=PWN_PH_HVR_9396_WEB_3580&edition=std-2&&utm_id=0a78d242add74539bb3d50de93465cb2&http_referrer=https%3A%2F%2Fwww.opera.com%2Fget%2Fopera-gx%3Futm_source%3DPWNgames%26utm_medium%3Dpa%26utm_campaign%3DPWN_PH_HVR_9396_WEB_3580%26utm_id%3D0a78d242add74539bb3d50de93465cb2%26edition%3Dstd-2&utm_site=opera_com&&utm_lastpage=opera.com/gx',
-            'Brave': 'https://laptop-updates.brave.com/download/BRV010?bitness=64',
+            'mozillafirefox': 'https://download.mozilla.org/?product=firefox-stub&os=win&lang=en-US&attribution_code=c291cmNlPXd3dy5nb29nbGUuY29tJm1lZGl1bT1yZWZlcnJhbCZjYW1wYWlnbj1TRVRfREVGQVVMVF9CUk9XU0VSJmNvbnRlbnQ9KG5vdCBzZXQpJmV4cGVyaW1lbnQ9KG5vdCBzZXQpJnZhcmlhdGlvbj0obm90IHNldCkmdWE9Y2hyb21lJmNsaWVudF9pZF9nYTQ9Mzg2MzI0MjE5LjE3NjUxODk2NDkmc2Vzc2lvbl9pZD00NDk1MDQxMzQxJmRsc291cmNlPWZ4ZG90Y29t&attribution_sig=76dcba95b770881745bbba89d77b011307f2687a99f970ec8216f135bd39bdc2',
+            'opera': 'https://net.geo.opera.com/opera/stable/windows?utm_tryagain=yes&utm_source=PWNgames&utm_medium=pa&utm_campaign=PWN_PH_HVR_9396_WEB_3580&edition=std-2&&utm_id=0a78d242add74539bb3d50de93465cb2&http_referrer=https%3A%2F%2Fwww.opera.com%2Fget%2Fopera-gx%3Futm_source%3DPWNgames%26utm_medium%3Dpa%26utm_campaign%3DPWN_PH_HVR_9396_WEB_3580%26utm_id%3D0a78d242add74539bb3d50de93465cb2%26edition%3Dstd-2&utm_site=opera_com&&utm_lastpage=opera.com/',
+            'operagx': 'https://net.geo.opera.com/opera_gx/stable/windows?utm_tryagain=yes&utm_source=PWNgames&utm_medium=pa&utm_campaign=PWN_PH_HVR_9396_WEB_3580&edition=std-2&&utm_id=0a78d242add74539bb3d50de93465cb2&http_referrer=https%3A%2F%2Fwww.opera.com%2Fget%2Fopera-gx%3Futm_source%3DPWNgames%26utm_medium%3Dpa%26utm_campaign%3DPWN_PH_HVR_9396_WEB_3580%26utm_id%3D0a78d242add74539bb3d50de93465cb2%26edition%3Dstd-2&utm_site=opera_com&&utm_lastpage=opera.com/gx',
+            'brave': 'https://laptop-updates.brave.com/download/BRV010?bitness=64',
             'vivaldi': 'https://downloads.vivaldi.com/stable/Vivaldi.7.7.3851.58.x64.exe',
 
             #COMMUNICATION
             'discord': 'https://discord.com/api/download?platform=win',
             'telegram': 'https://telegram.org/dl/desktop/win',
-            'Microsoft Teams': 'https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe',
+            'microsoftteams': 'https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe',
 
             #MEDIA AND FILES
             'vlc': 'https://get.videolan.org/vlc/3.0.18/win64/vlc-3.0.18-win64.exe',
@@ -81,10 +81,10 @@ class SoftwareInstaller:
         except:
             return False        
         
-    def install_visualcplusplus(self):
+    def install_visualc(self):
         self.logger.log("Installing Visual C++")
         try:
-            webbrowser.open(self.urls['visual c++'])
+            webbrowser.open(self.urls['visualc'])
             return True
         except:
             return False
@@ -130,10 +130,10 @@ class SoftwareInstaller:
         except:
             return False
 
-    def install_visual_studio(self):
+    def install_visualstudio(self):
         self.logger.log("Installing Visual Studio")
         try:
-            webbrowser.open(self.urls['visual studio'])
+            webbrowser.open(self.urls['visualstudio'])
             return True
         except:
             return False
@@ -150,7 +150,7 @@ class SoftwareInstaller:
     def install_androidstudio(self):
         self.logger.log("Installing Android Studio")
         try:
-            webbrowser.open(self.urls['Android Studio'])
+            webbrowser.open(self.urls['androidstudio'])
             return True
         except:
             return False
@@ -166,7 +166,7 @@ class SoftwareInstaller:
     def install_notepad(self):
         self.logger.log("Installing Notepad++")
         try:
-            webbrowser.open(self.urls['notepad++'])
+            webbrowser.open(self.urls["notepad"])
             return True
         except:
             return False
@@ -182,25 +182,25 @@ class SoftwareInstaller:
     def install_sublimetext(self):
         self.logger.log("Installing Sublime Text")
         try:
-            webbrowser.open(self.urls['sublime_text'])
+            webbrowser.open(self.urls['sublimetext'])
             return True
         except:
             return False
         
     #ACADEMIC
-    def install_Grammarly(self):
+    def install_grammarly(self):
         self.logger.log("Installing Grammarly")
         try:
-            webbrowser.open(self.urls['Grammarly'])
+            webbrowser.open(self.urls['grammarly'])
             return True
         except:
             return False
         
 
-    def install_Canva(self):
+    def install_canva(self):
         self.logger.log("Installing Canva")
         try:
-            webbrowser.open(self.urls['Canva'])
+            webbrowser.open(self.urls['canva'])
             return True
         except:
             return False
@@ -225,71 +225,71 @@ class SoftwareInstaller:
     def install_tableaupublic(self):
         self.logger.log("Installing Tableau Public")
         try:
-            webbrowser.open(self.urls['Tableau Public'])
+            webbrowser.open(self.urls['tableaupublic'])
             return True
         except:
             return False
         
-    def install_M365(self):
+    def install_m365(self):
         self.logger.log("Installing M365")
         try:
-            webbrowser.open(self.urls['M365'])
+            webbrowser.open(self.urls['m365'])
             return True
         except:
             return False
 
     #CREATIVITY
-    def install_GIMP(self):
+    def install_gimp(self):
         self.logger.log("Installing GIMP")
         try:
-            webbrowser.open(self.urls['GIMP'])
+            webbrowser.open(self.urls['gimp'])
             return True
         except:
             return False
 
-    def install_Blender(self):
+    def install_blender(self):
         self.logger.log("Installing Blender")
         try:
-            webbrowser.open(self.urls['Blender'])
+            webbrowser.open(self.urls['blender'])
             return True
         except:
             return False
 
-    def install_Audacity(self):
+    def install_audacity(self):
         self.logger.log("Installing Audacity")
         try:
-            webbrowser.open(self.urls['Audacity'])
+            webbrowser.open(self.urls['audacity'])
             return True
         except:
             return False
 
-    def install_Krita(self):
+    def install_krita(self):
         self.logger.log("Installing Krita")
         try:
-            webbrowser.open(self.urls['Krita'])
+            webbrowser.open(self.urls['krita'])
             return True
         except:
             return False  
 
-    def install_Capcut(self):
+    def install_capcut(self):
         self.logger.log("Installing CapCut")
         try:
-            webbrowser.open(self.urls['CapCut'])
+            webbrowser.open(self.urls['capcut'])
             return True
         except:
             return False
         
     
     #COMMUNICATION
-    def install_Microsoft(self):
+    def install_microsoftteams(self):
         self.logger.log("Installing Microsoft Teams")
         try:
-            webbrowser.open(self.urls['Microsoft Teams'])
+            webbrowser.open(self.urls['microsoftteams'])
             return True
         except:
             return False
         
-    def install_Discord(self):
+    def install_discord(self):
         self.logger.log("Installing Discord")
         try:
             webbrowser.open(self.urls['discord'])
@@ -297,16 +297,16 @@ class SoftwareInstaller:
         except:
             return False
         
-    def install_Telegram(self):
+    def install_telegram(self):
         self.logger.log("Installing Telegram")
         try:
-            webbrowser.open(self.urls['Telegram'])
+            webbrowser.open(self.urls['telegram'])
             return True
         except:
             return False
         
     #MEDIA AND FILES
-    def install_VLC(self):
+    def install_vlc(self):
         self.logger.log("Installing VLC")
         try:
             webbrowser.open(self.urls['vlc'])
@@ -322,7 +322,7 @@ class SoftwareInstaller:
         except:
             return False
         
-    def install_Winrar(self):
+    def install_winrar(self):
         self.logger.log("Installing Winrar")
         try:
             webbrowser.open(self.urls['winrar'])
@@ -341,12 +341,12 @@ class SoftwareInstaller:
     def install_mysqlworkbench(self):
         self.logger.log("Installing MySQL Workbench")
         try:
-            webbrowser.open(self.urls['mysql workbench'])
+            webbrowser.open(self.urls['mysqlworkbench'])
             return True
         except:
             return False
         
-    def install_Postgresql(self):
+    def install_postgresql(self):
         self.logger.log("Installing PostGreSQL")
         try:
             webbrowser.open(self.urls['postgresql'])
@@ -357,15 +357,15 @@ class SoftwareInstaller:
     def install_mongodbcompass(self):
         self.logger.log("Installing Mongo Database Compass")
         try:
-            webbrowser.open(self.urls['mongodb compass'])
+            webbrowser.open(self.urls['mongodbcompass'])
             return True
         except:
             return False
         
-    def install_sqliteBrowser(self):
+    def install_sqlitebrowser(self):
         self.logger.log("Installing SQLite Browser")
         try:
-            webbrowser.open(self.urls['sqlite browser'])
+            webbrowser.open(self.urls['sqlitebrowser'])
             return True
         except:
             return False
@@ -379,26 +379,26 @@ class SoftwareInstaller:
             return False
         
     #WEB BROWSER
-    def install_MozillaFirefox(self):
+    def install_mozillafirefox(self):
         self.logger.log("Installing Mozilla Firefox")
         try:
-            webbrowser.open(self.urls['mozilla firefox'])
+            webbrowser.open(self.urls['mozillafirefox'])
             return True
         except:
             return False
         
-    def install_Opera(self):
+    def install_opera(self):
         self.logger.log("Installing Opera")
         try:
-            webbrowser.open(self.urls['Opera'])
+            webbrowser.open(self.urls['opera'])
             return True
         except:
             return False
         
-    def install_OperaGX(self):
+    def install_operagx(self):
         self.logger.log("Installing OperaGX")
         try:
-            webbrowser.open(self.urls['Opera GX'])
+            webbrowser.open(self.urls['operagx'])
             return True
         except:
             return False
@@ -411,10 +411,10 @@ class SoftwareInstaller:
         except:
             return False
         
-    def install_Brave(self):
+    def install_brave(self):
         self.logger.log("Installing Brave")
         try:
-            webbrowser.open(self.urls['Brave'])
+            webbrowser.open(self.urls['brave'])
             return True
         except:
             return False
