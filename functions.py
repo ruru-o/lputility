@@ -19,7 +19,7 @@ class ToolkitFunctions:
             return self.installer.install_eclipse()
         elif software_key == "vscode":
             return self.installer.install_vscode()
-        elif software_key == "visualstudio":
+        elif software_key == "visual_studio":
             return self.installer.install_visualstudio()
         elif software_key == "androidstudio":
             return self.installer.install_androidstudio()
