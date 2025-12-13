@@ -181,7 +181,7 @@ class ToolkitInterface:
         
         welcome = tk.Label(
             self.tools_frame,
-            text="← Pick your poison",
+            text="← Choose your option.",
             font=('Segoe UI', 13),
             bg=self.COLORS['bg'],
             fg=self.COLORS['text_dim']
