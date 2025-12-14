@@ -1,4 +1,4 @@
-# LOGS - JOSWENIGGA PINCA
+# LOGS - JOSWEN PINCA
 
 import os
 from datetime import datetime
@@ -24,3 +24,4 @@ class Logger:
                 f.write(entry)
         except:
             print(entry)  # fallback to console
+
