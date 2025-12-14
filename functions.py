@@ -1,4 +1,4 @@
-# FUNCTION - JOSWENIGGA PINKGUY
+# FUNCTION - JOSWEN PINKGUY
 
 from installer import SoftwareInstaller
 
@@ -111,6 +111,7 @@ class ToolkitFunctions:
             return self.installer.install_nanazip()
 
         return False
+
 
 
 
